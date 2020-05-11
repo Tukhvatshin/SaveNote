@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mInputNote = findViewById(R.id.inputNote);
         mBtnSaveNote = findViewById(R.id.btnSaveNote);
 
-        myNoteSharedPref = getSharedPreferences("MyNote", MODE_PRIVATE);
+        myNoteSharedPref = getSharedPreferences(getString(R.string.MyNote), MODE_PRIVATE);
 
         mBtnSaveNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 String noteTxt = mInputNote.getText().toString();
                 myEditor.putString(NOTE_TEXT, noteTxt);
                 myEditor.apply();
-                Toast.makeText(MainActivity.this, "данные сохранены", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, getString(R.string.Savetxt) + mInputNote.getText().toString() + getString(R.string.savetxt_1), Toast.LENGTH_LONG).show();
+                mInputNote.getText().clear();
             }
         });
     }

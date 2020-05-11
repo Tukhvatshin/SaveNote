@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">SaveNote</string>
     <string name="btnSaveNote">Сохранить</string>
+    <string name="mInputNote" />
+    <string name="myNoteSharedPref" />
+    <string name="Savetxt">\Запись \"</string>
+    <string name="savetxt_1">\" сохранена</string>
+    <string name="MyNote">MyNote</string>
 </resources>
